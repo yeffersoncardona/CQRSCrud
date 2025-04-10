@@ -1,0 +1,24 @@
+@CQRSCrud_HostAddress = http://localhost:5197
+
+GET {{CQRSCrud_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+@id=0
+GET {{CQRSCrud_HostAddress}}/api/product/GetById/{{id}}
+
+###
+
+POST {{CQRSCrud_HostAddress}}/api/product/Create
+Content-Type: application/json
+
+{
+  //CreateProductCommand
+}
+
+###
+
+GET {{CQRSCrud_HostAddress}}/api/product/GetAll
+
+###
